@@ -21,6 +21,10 @@ class CharacterCreatePage extends React.Component {
     };
   }
 
+  resetFields = () => {
+    
+  }
+
   setCurrentActive = (currentActive) => {
     this.setState({
       currentActive

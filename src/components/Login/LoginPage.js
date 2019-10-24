@@ -21,6 +21,7 @@ class LoginPage extends React.Component {
   render() {
     return (
       <section className='loginPage'>
+        <h1>A Simple DnD 5e Character App</h1>
         <fieldset>
           <legend>
             <h2>Login</h2>
