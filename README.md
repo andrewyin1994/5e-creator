@@ -43,12 +43,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Screenshots
 
-[Login Screen](https://i.imgur.com/b1lnVzH.png)
+![Login Screen](https://i.imgur.com/b1lnVzH.png)
 
-[Register Screen](https://i.imgur.com/rxYH2Vy.png)
+![Register Screen](https://i.imgur.com/rxYH2Vy.png)
 
-[Home Page](https://i.imgur.com/c6cKNKY.png)
+![Home Page](https://i.imgur.com/c6cKNKY.png)
 
-[Character Sheet](https://i.imgur.com/4YYFml4.png)
+![Character Sheet](https://i.imgur.com/4YYFml4.png)
 
-[Character Create](https://i.imgur.com/Zm0xCjH.png)
+![Character Create](https://i.imgur.com/Zm0xCjH.png)
