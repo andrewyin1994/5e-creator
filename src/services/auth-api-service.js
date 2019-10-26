@@ -2,7 +2,6 @@ import config from '../config';
 
 const AuthAPIService = {
   postLogin: async function (cred) {
-    // stuff
     const res = await fetch(`${config.API_ENDPOINT}/auth/login`, {
       method: 'POST',
       headers: {
