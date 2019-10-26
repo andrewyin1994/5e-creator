@@ -25,13 +25,18 @@ class CharacterList extends React.Component {
     const characters = this.context.characters.map((character, index) => {
       return (
         <CharacterThumbnail
-          key={index}
-          charId={index}
-          // charId={character.charId}
+          key={character.charId}
+          charId={character.charId}
           charName={character.charName}
           charRace={character.charRace}
           charClass={character.charClass}
           charDesc={character.charDesc}
+          strength={character.strength}
+          dexterity={character.dexterity}
+          constitution={character.constitution}
+          intelligence={character.intelligence}
+          wisdom={character.wisdom}
+          charisma={character.charisma}
         />
       );
     });

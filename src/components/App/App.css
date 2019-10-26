@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   top: 80px;
-  width: 100%;
+  background: inherit;
 }
 
 .parallax {
@@ -19,14 +19,12 @@
 }
 
 .frosted-glass {
-  /* height: 50px; */
   background: inherit;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 1;
-  /* background-color: red; */
 }
 
-.frosted-glass:before {
+.frosted-glass::before {
   content: "";
   position: absolute;
   top: 0;
@@ -35,11 +33,8 @@
   bottom: 0;
   z-index: -1;
   background: inherit;
-  /* background-color: white; */
-  box-shadow: inset 0 0 3000px rgba(255, 255, 255, .5);
-  /* opacity: 0.75; */
+  box-shadow: inset 0 0 3000px rgba(0, 0, 0, 0.5);
   filter: blur(10px);
-  /* background-color: white; */
+  overflow: hidden;
   margin: -10px;
-  /* overflow: hidden; */
 }

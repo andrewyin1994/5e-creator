@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CharacterCreateNav from './CharacterCreateNav';
 import CharacterCreateDetails from './CharacterCreateDetails';
+import CharacterCreateAbilityScores from './CharacterCreateAbilityScores';
 import CharactersAPIService from '../../services/characters-api-service';
 
 import './CharacterCreatePage.css';
@@ -45,42 +45,35 @@ class CharacterCreatePage extends React.Component {
   handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const charName = e.target.charName.value;
-    const charRace = e.target.charRace.value;
-    const charClass = e.target.charClass.value;
-    const charDesc = e.target.charDesc.value;
+    const formData = new FormData(e.target);
+    const newChar = {};
 
-    this.addCharacter({
-      charName,
-      charRace,
-      charClass,
-      charDesc
-    });
+    formData.forEach((value, key) => newChar[key] = value);
+    
+    this.addCharacter(newChar);
+    this.props.history.goBack();
   }
 
   render() {
     const characterCreateComponents = {
       details: <CharacterCreateDetails />,
-      abilityScores: <div>Ability Scores</div>,
-      classFeatures: <div>Class Features</div>,
-      spellsList: <div>Spells List</div>,
-      equipment: <div>Equipment</div>
+      abilityScores: <CharacterCreateAbilityScores />
     };
 
     return (
       <section className='characterCreatePage'>
-        <CharacterCreateNav
-          setCurrentActive={this.setCurrentActive}
-          currentActive={this.state.currentActive}
-        />
-
         <form className='characterCreateForm'
           onSubmit={this.handleFormSubmit}
         >
-          {characterCreateComponents[this.state.currentActive]}
+          <h1>Create a New Character</h1>
+          <h3>Character Details</h3>
+          {characterCreateComponents.details}
+
+          <h3>Ability Scores</h3>
+          {characterCreateComponents.abilityScores}
           <section className='submitSection'>
             <button type='submit'>Submit</button>
-            <button type='reset' onClick={this.cancelButtonClick}>Cancel</button>
+            <button type='reset' onClick={() => this.props.history.goBack()}>Cancel</button>
           </section>
         </form>
       </section >

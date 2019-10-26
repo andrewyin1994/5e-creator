@@ -16,10 +16,10 @@ class App extends React.Component {
 
   render() {
     return <>
-      <main className='parallax'>
-        <HamburgerMenu />
+      <div className='parallax'>
 
-        <div className='app'>
+        <HamburgerMenu />
+        <main className='app'>
           <Switch>
             <Route
               exact
@@ -50,8 +50,9 @@ class App extends React.Component {
               component={NotFoundPage}
             />
           </Switch>
-        </div>
-      </main>
+        </main>
+      </div>
+
     </>;
   }
 }

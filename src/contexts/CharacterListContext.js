@@ -2,6 +2,18 @@ import React from 'react';
 
 const CharacterListContext = React.createContext({
   characters: [],
+  validClasses: [
+    'barbarian',
+    'bard',
+    'cleric',
+    'druid',
+    'fighter',
+    'monk',
+    'paladin',
+    'sorcerer',
+    'warlock',
+    'wizard'
+  ],
   error: null,
   setError: () => { },
   clearError: () => { },
@@ -12,6 +24,18 @@ class CharacterListProvider extends React.Component {
   state = {
     characters: [],
     error: null,
+    validClasses: [
+      'barbarian',
+      'bard',
+      'cleric',
+      'druid',
+      'fighter',
+      'monk',
+      'paladin',
+      'sorcerer',
+      'warlock',
+      'wizard'
+    ]  
   }
 
   setCharactersList = characters => {
@@ -29,6 +53,7 @@ class CharacterListProvider extends React.Component {
   render() {
     const value = {
       characters: this.state.characters,
+      validClasses: this.state.validClasses,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,

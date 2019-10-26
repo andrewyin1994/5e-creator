@@ -1,21 +1,47 @@
 .loginPage {
+  display: flex;
+  flex-direction: column;
+  background: inherit;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 40px;
+  color: white;
+  font-size: 20px;
+}
+.loginPage h1 {
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  margin: 0;
+}
+.loginPage #loginMessage,
+.loginPage #demoInfo {
+  text-align: center;
+  font-weight: bold;
+  -webkit-text-stroke: 0.75px black;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 500px;
 }
 
 .loginPage h2 {
+  text-align: center;
   margin: 20px 0;
 }
 
 .loginPage fieldset {
+  background: inherit;
+  position: relative;
+  /* background: rgba(255, 0, 0, 0.25); */
   width: 300px;
 }
 
 .loginForm {
+  /* background: inherit; */
   display: flex;
   flex-direction: column;
+  /* color: black; */
 }
 
 
@@ -28,4 +54,12 @@
 
 .loginButton {
   width: 45%;
+}
+
+p#loginMessage {
+  text-align: center;
+  line-height: 24px;
+}
+div.frosted-container {
+  background: inherit;
 }

@@ -20,19 +20,18 @@ class CharacterCreateNav extends React.Component {
       tabOptions: {
         details: 'Details',
         abilityScores: 'Ability Scores',
-        classFeatures: 'Class Features',
-        spellsList: 'Spells List',
-        equipment: 'Equipment'
+        // classFeatures: 'Class Features',
+        // spellsList: 'Spells List',
+        // equipment: 'Equipment'
       }
     };
   }
 
   render() {
     const tabOptions = Object.keys(this.state.tabOptions).map((option, index) => {
-      const tabClass = `characterCreateTabs ${(option === this.props.currentActive) && 'active'}`;
       return (
         <li
-          className={tabClass}
+          className={'characterCreateTabs' + (option === this.props.currentActive ? ' active' : '')}
           key={index}
           id={option}
           onClick={() => this.props.setCurrentActive(option)}

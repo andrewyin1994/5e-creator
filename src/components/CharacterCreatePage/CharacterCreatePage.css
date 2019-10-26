@@ -1,47 +1,112 @@
-.characterCreatePage {
-  width: 80%;
-}
-
 .characterCreateForm {
   border: 1px black solid;
-  border-top: none;
-  /* width: 90vw; */
+  width: 300px;
+  padding: 20px 10px 30px 10px;
+  background: white;
+  opacity: 0.75;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background: white;
-  opacity: 0.75;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.characterCreateForm h1 {
+  margin: 0;
+  text-align: center;
+}
+.characterCreateForm h3 {
+  text-align: center;
+}
+.characterCreateForm input:focus,
+.characterCreateForm textarea:focus,
+.characterCreateForm button:focus {
+  outline: none;
+  border: 1px solid transparent;
+  padding: 6px;
+  box-shadow: 0 0 5px cyan;
 }
 
-.characterCreateNav {
+
+.characterCreateDetails {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 330px;
+}
+.characterCreateDetails label {
+  margin-bottom: 5px;
+}
+.characterCreateDetails input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.characterCreateDetails textarea {
+  height: 100px;
+}
+.characterCreateDetails span {
+  width: 100%;
+  text-align: right;
+  font-size: 12px;
+  color: gray
+}
+.characterCreateDetails label,
+.characterCreateDetails input,
+.characterCreateDetails textarea {
+  width: 100%;
+}
+
+
+.characterCreateAbilityScores {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(2, 100px);
 }
-
-.characterCreateTabs {
-  padding: 10px 0;
-  width: 20%;
+.characterCreateAbilityScores li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+}
+.characterCreateAbilityScores li input {
+  width: 50px;
+  height: 25px;
   text-align: center;
-  border-bottom: 1px solid black;
-  background: white;
-  opacity: 0.75;
-  /* box-shadow: 0 -5px 5px 0px white; */
 }
 
-.characterCreateTabs:hover {
-  cursor: pointer;
+.submitSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
 }
-
-.active {
-  border: 1px solid black;
-  border-bottom: none;
-}
-
 .submitSection button {
-  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid gray;
+  margin: 0;
   width: 80px;
+  height: 30px;
+}
+
+@media only screen and (min-width: 512px) {
+  .characterCreateForm {
+    width: 500px;
+  }
+
+  .characterCreateDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+  }
+  .characterCreateDetails input,
+  .characterCreateDetails textarea {
+    width: 100%;
+  }
+  .characterCreateDetails textarea {
+    height: 100px;
+  }
 }

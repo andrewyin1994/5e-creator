@@ -1,8 +1,76 @@
 .characterSheet {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
   margin: 5px;
   padding: 10px;
   border: 1px black solid;
   background: white;
   opacity: 0.75;
+}
+
+#charInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  text-align: center;
+}
+#charInfo img {
+  height: 140px;
+}
+#charDesc {
+  grid-column: 1/3;
+  line-height: 24px;
+}
+
+#characterSheetStats {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 33%);
+  grid-column: 1/3;
+}
+#characterSheetStats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* height: 50px; */
+}
+#characterDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  overflow: auto;
+}
+
+.statLabel {
+  font-size: 20px;
+}
+.statMod {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.statValue {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .characterSheet {
+    width: 500px;
+  }
+  #charInfo {
+    grid-template-columns: repeat(3, 140px);
+  }
+  
+  #charDesc{
+    grid-column: 3/4
+  }
+
+  #characterSheetStats {
+    grid-column: 1/4;
+  }
 }

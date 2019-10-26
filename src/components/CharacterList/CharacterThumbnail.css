@@ -1,8 +1,65 @@
+.link {
+  text-decoration: none;
+  color: black
+}
+.link:visited {
+  color: black;
+}
+
 .characterThumbnail {
   padding: 10px;
   border: 1px black solid;
-  width: 80%;
-  margin-bottom: 10px;
+  width: 230px;
+  height: 230px;
   background-color: white;
   opacity: 0.75;
+  transition: 0.25s;
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 5px;
+}
+.characterThumbnail:hover {
+  opacity: 1;
+}
+
+.characterThumbnail img {
+  height: 100px;
+  width: 100px;
+}
+.characterThumbnail p {
+  margin: 10px 0;
+}
+.characterInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  overflow: auto;
+}
+.characterInfo h3 {
+  margin: 0;
+}
+.characterThumbnail p {
+  margin: 0;
+}
+
+.characterStats {
+  padding: 0;
+  grid-column: 1/span 2;
+  display: grid;
+  grid-template-columns: repeat(3,33%);  
+  grid-template-rows: repeat(2, 50%);
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .characterThumbnail {
+    width: 250px;
+    height: 250px;
+    gap: 10px;
+    padding: 20px;
+  }
 }
