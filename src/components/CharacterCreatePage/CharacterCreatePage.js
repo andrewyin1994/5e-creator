@@ -37,12 +37,12 @@ class CharacterCreatePage extends React.Component {
     });
   }
 
-  addCharacter = (newCharacter) => {
-    CharactersAPIService.addCharacter(newCharacter);
+  addCharacter = async (newCharacter) => {
+    await CharactersAPIService.addCharacter(newCharacter);
   }
 
 
-  handleFormSubmit = (e) => {
+  handleFormSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
@@ -50,7 +50,7 @@ class CharacterCreatePage extends React.Component {
 
     formData.forEach((value, key) => newChar[key] = value);
     
-    this.addCharacter(newChar);
+    await this.addCharacter(newChar);
     this.props.history.goBack();
   }
 

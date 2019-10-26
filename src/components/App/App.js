@@ -31,6 +31,7 @@ class App extends React.Component {
               path={'/login'}
               component={LoginPage}
             />
+            
             <PrivateRoute
               exact
               path={'/characters'}

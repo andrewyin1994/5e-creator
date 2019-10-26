@@ -6,7 +6,7 @@ class LoginForm extends React.Component {
   static contextType = UserContext;
 
   static defaultProps = {
-    onLoginSuccess: () => { }
+    onLoginSuccess: () => { },
   }
 
   constructor(props) {
@@ -30,21 +30,15 @@ class LoginForm extends React.Component {
 
     userName.value = '';
     password.value = '';
-
-    this.props.onLoginSuccess();
+    this.props.onLoginSuccess();  
   }
 
   render() {
-    const error = this.context.error;
     return (
       <form
         className='loginForm'
         onSubmit={this.handleSubmitJWTAuth}
       >
-        <section className='errorSection'>
-          {error && <p className='red'>{error}</p>}
-        </section>
-
         <label htmlFor='userName'>
           Username:
         </label>
@@ -58,11 +52,10 @@ class LoginForm extends React.Component {
         </label>
         <input required type='password' id='password' name='password'>
         </input>
-
-        <br />
+        {this.context.error ? <p id='error'>{this.context.error}</p> : <br/>}
         <section className='buttonSection'>
-          <button className='loginButton' type='submit'>Login</button>
-          <input className='loginButton' type='reset' value='Clear'></input>
+          <input className='loginButton' type='submit' value='Login'></input>
+          <button className='loginButton' type='button' onClick={this.props.setRegisterState}>Register</button>
         </section>
       </form>
     );
