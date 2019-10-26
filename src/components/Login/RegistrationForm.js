@@ -7,7 +7,6 @@ class RegisterForm extends React.Component {
 
   handleRegister = async (e) => {
     e.preventDefault();
-    console.log('register');
     const { userName, password, fullName} = e.target;
     try {
       await this.context.register({
