@@ -50,7 +50,7 @@ class LoginPage extends React.Component {
         <p id='loginMessage'>
           5e Stuff is a lightweight Dungeons and Dragons 5e character management application. Use it to keep track of all of your characters!
         </p>
-        <fieldset className='frosted-glass'>
+        <fieldset>
           <h2>{this.state.active}</h2>
           {forms[this.state.active]}
         </fieldset>
