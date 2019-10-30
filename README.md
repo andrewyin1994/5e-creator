@@ -5,7 +5,7 @@
 
 Live App Link: https://5e-stuff.netlify.com<br/>
 Live Server Link: https://intense-wildwood-33210.herokuapp.com/api<br/>
-Client Repo: https://github.com/andrewyin1994/5e-creator-client<br/>
+Client Repo: https://github.com/andrewyin1994/5e-creator-server<br/>
 
 ## Test Accounts
 user: mmercer<br>
